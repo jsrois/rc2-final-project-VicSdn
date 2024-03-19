@@ -1,0 +1,9 @@
+import{r as l}from"./index.NEDEFKed.js";var c={exports:{}},f={};/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var u=l,p=Symbol.for("react.element"),x=Symbol.for("react.fragment"),m=Object.prototype.hasOwnProperty,h=u.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,y={key:!0,ref:!0,__self:!0,__source:!0};function d(r,t,s){var e,i={},o=null,a=null;s!==void 0&&(o=""+s),t.key!==void 0&&(o=""+t.key),t.ref!==void 0&&(a=t.ref);for(e in t)m.call(t,e)&&!y.hasOwnProperty(e)&&(i[e]=t[e]);if(r&&r.defaultProps)for(e in t=r.defaultProps,t)i[e]===void 0&&(i[e]=t[e]);return{$$typeof:p,type:r,key:o,ref:a,props:i,_owner:h.current}}f.Fragment=x;f.jsx=d;f.jsxs=d;c.exports=f;var n=c.exports;function v(){const[r,t]=l.useState(s());l.useEffect(()=>{const e=setInterval(()=>{t(s())},1e3);return()=>{clearInterval(e)}},[]);function s(){const e=new Date,o=+new Date("June 14, 2024")-+e;let a={days:0,hours:0,minutes:0,seconds:0};return o>0&&(a={days:Math.floor(o/(1e3*60*60*24)),hours:Math.floor(o/(1e3*60*60)%24),minutes:Math.floor(o/1e3/60%60),seconds:Math.floor(o/1e3%60)}),a}return n.jsx("div",{children:Object.keys(r).length===0?n.jsx("div",{children:"¡Ya ha comenzado!"}):n.jsxs("div",{children:[n.jsx("div",{style:{color:"#fc8802",fontSize:"20px"},children:"Solo faltan..."}),n.jsxs("div",{style:{color:"#8b95a6",fontSize:"22px",textShadow:"0 0 2px #000, 0 0 2px #000"},children:[r.days," días, ",r.hours," horas ",r.minutes," min ",r.seconds," seg"]}),n.jsx("div",{style:{color:"#000000",fontSize:"16px",textShadow:"0 0 2px #fc8802"},children:"14 de junio"})]})})}export{v as default};
