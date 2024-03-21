@@ -42,11 +42,11 @@ function Countdown() {
                 <div>¡Ya ha comenzado!</div>
             ) : (
                 <div>
-                        <div style={{ color: "#fc8802" , fontSize:"20px"}}>Solo faltan...</div>
-                        <div style={{ color: "#8b95a6", fontSize: "22px", textShadow: "0 0 2px #000, 0 0 2px #000" }}>
+                    <div style={{ color: "#fc8802", fontSize: "20px" }}>Solo faltan...</div>
+                    <div style={{ color: "#8b95a6", fontSize: "22px", textShadow: "0 0 2px #000, 0 0 2px #000" }}>
                         {timeLeft.days} días, {timeLeft.hours} horas {timeLeft.minutes} min {timeLeft.seconds} seg
                     </div>
-                        <div style={{ color: "#000000", fontSize: "16px" , textShadow:"0 0 2px #fc8802" }} >14 de junio</div>
+                    <div style={{ color: "#000000", fontSize: "16px", textShadow: "0 0 2px #fc8802" }} >14 de junio</div>
                 </div>
             )}
         </div>
