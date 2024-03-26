@@ -1,25 +1,49 @@
 ---
-import Countdown from "./Countdown.jsx";
+import Countdown from "./Countdown";
 ---
 
-<header
-  class="fixed top-0 w-full px-10 py-4 z-50 bg-blue-400 text-white"
-  style="margin-bottom: -20px;"
->
+<header class="fixed top-0 w-full px-10 py-4 z-50 bg-blue-400 text-white">
   <div class="max-w-7xl h-12 mx-auto flex items-center justify-between">
     <div style="margin-top: 60px;">
-     <a href="/" > <img src="/CANGASCUPLOGO.png" alt="logo" class="w-24 h-auto" /> </a> 
+      <a href="/">
+        <img src="/CANGASCUPLOGO.png" alt="logo" class="w-24 h-auto" />
+      </a>
     </div>
-    <div class="flex items-center space-x-8" style="margin-left: 90px;">
+    <nav class="hidden md:flex items-center space-x-8 ml-8">
       <a href="/regulations" class="text-white hover:text-gray-200 text-xl"
         >Reglamento</a
       >
       <a href="/results" class="text-white hover:text-gray-200 text-xl"
         >Resultados</a
       >
+    </nav>
+    <div class="md:hidden justify-between">
+      <button id="toggleButton" class="text-white hover:text-gray-200 text-xl"
+        >Menú</button
+      >
+      <div id="menu" class="hidden">
+        <nav class="flex flex-row items-center space-y-3">
+          <a href="/regulations" class="text-white hover:text-gray-200"
+            >Reglamento</a
+          >
+          <a href="/results" class="text-white hover:text-gray-200"
+            >Resultados</a
+          >
+        </nav>
+      </div>
     </div>
-    <div class="text-center">
-      <Countdown client:load />
-    </div>
+    <Countdown />
   </div>
 </header>
+
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const menu = document.getElementById("menu");
+
+  toggleButton.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    toggleButton.textContent = menu.classList.contains("hidden")
+      ? "Menú"
+      : "Cerrar";
+  });
+</script>
