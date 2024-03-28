@@ -3,9 +3,7 @@ interface Props {
   title: string;
   description: string;
 }
-
 const { title, description } = Astro.props;
-
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource-variable/onest";
@@ -17,34 +15,34 @@ import "@fontsource-variable/onest";
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/" href="/CANGASCUPLOGO.png" />
+    <link rel="icon" type="icon" href="/CANGASCUPLOGO.png" />
     <title>{title}</title>
   </head>
-</html>
-<body>
-  <Header />
-  <slot />
-  <Footer />
-</body>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 
-<style is:global>
-  :root {
-    color-scheme: dark;
-  }
-  html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-    background: black;
-  }
-  p {
-    color: rgb(255, 255, 255, 0.9);
-    line-height: 1.4;
-    margin-bottom: 1em;
-    font-weight: 100;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
-  }
-  p strong {
-    color: white;
-    font-weight: 700;
-  }
-</style>
+  <style is:global>
+    :root {
+      color-scheme: dark;
+    }
+    html {
+      font-family: "Onest Variable", system-ui, sans-serif;
+      background: black;
+    }
+    p {
+      color: rgb(255, 255, 255, 0.9);
+      line-height: 1.4;
+      margin-bottom: 1em;
+      font-weight: 100;
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+    }
+    p strong {
+      color: white;
+      font-weight: 700;
+    }
+  </style>
+</html>

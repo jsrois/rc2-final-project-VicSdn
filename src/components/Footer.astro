@@ -1,18 +1,18 @@
+---
+import FooterContent from "./FooterContent.astro";
+import SocialButtons from "./SocialButtons.astro";
+---
+
 <footer
-  class="bottom-0 left-0 w-full h-16 px-10 py-2 sm:h-20 sm:py-4 z-50 bg-blue-400 text-white flex items-center justify-between"
+  class="relative mt-20 flex w-full flex-col place-items-center pb-20 pt-14 md:flex-row md:justify-between md:pt-16"
 >
-  <div class="flex items-center space-x-20 mx-auto">
-    <a href="https://www.instagram.com/cangascup?igsh=N2UwZ3E2OGRuaWsy"
-      ><img
-        src="/instagram-seeklogo.svg"
-        class="h-6 sm:h-8 md:h-10 lg:h-12 xl:h-14"
-      /></a
-    >
-    <a href="https://maps.app.goo.gl/Bn5e6YBUtLjGsXJj7">
-      <img
-        src="/google-maps-icon-2020-seeklogo.svg"
-        class="h-6 sm:h-8 md:h-10 lg:h-12 xl:h-14"
-      />
-    </a>
-  </div>
+  <hr
+    class="absolute top-0 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"
+  />
+  <FooterContent />
+  <hr
+    aria-hidden="true"
+    class="my-12 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:hidden"
+  />
+  <SocialButtons />
 </footer>
