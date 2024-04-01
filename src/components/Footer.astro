@@ -1,6 +1,6 @@
 ---
 import FooterContent from "./FooterContent.astro";
-import SocialButtons from "./SocialButtons.astro";
+import SocialButtons from "../sections/SocialButtons.astro";
 ---
 
 <footer
@@ -14,5 +14,5 @@ import SocialButtons from "./SocialButtons.astro";
     aria-hidden="true"
     class="my-12 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:hidden"
   />
-  <SocialButtons />
+  <SocialButtons class="flex items-center justify-center" />
 </footer>
