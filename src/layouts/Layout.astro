@@ -8,6 +8,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource-variable/onest";
 import ButtonUp from "../sections/ButtonUp.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import ButtonUp from "../sections/ButtonUp.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="icon" href="/CANGASCUPLOGO.png" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />
