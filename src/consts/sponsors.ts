@@ -58,7 +58,7 @@ export const SPONSORS: Array<Sponsors> = [
   {
     id: "lozano",
     name: "Transportes Lozano",
-    url: "https://transporteslozano.com",
+    url: "https://www.instagram.com/adrianlozano11/",
     image: {
       width: 250,
       height: 110,
@@ -74,21 +74,21 @@ export const SPONSORS: Array<Sponsors> = [
     },
   },
   {
-    id: "maxibon",
-    name: "Maxibon",
+    id: "javita",
+    name: "Javita",
     url: "https://maxibon.es/",
     image: {
-      width: 176,
-      height: 73,
+      width: 250,
+      height: 150,
     },
   },
   {
-    id: "infojobs",
-    name: "InfoJobs",
-    url: "https://infojobs.net",
+    id: "manin",
+    name: "Manin",
+    url: "https://www.instagram.com/manintienemiga/?hl=es",
     image: {
-      width: 140,
-      height: 77,
+      width: 300,
+      height: 250,
     },
   },
 ] as const;

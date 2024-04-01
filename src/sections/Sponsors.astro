@@ -5,10 +5,12 @@ import { SPONSORS } from "../consts/sponsors";
 
 <section class="m-6">
   <h1 class="text-4xl font-bold text-center mb-6">Patrocinadores</h1>
-  <p class="text-xl font-semibold text-center mb-4">El maratón no seria posible sin ellos.</p>
+  <p class="text-xl font-semibold text-center mb-4">
+    El maratón no seria posible sin ellos.
+  </p>
   <div class="mt-12 grid select-none grid-cols-3 gap-2 md:gap-8">
     {
-      SPONSORS.filter(({ id }) => id !== "infojobs").map(
+      SPONSORS.filter(({ id }) => id !== "manin").map(
         ({ id, name, url, image }) => (
           <a
             class="company-link group relative flex h-24 items-center justify-center overflow-hidden md:h-32"
@@ -36,15 +38,15 @@ import { SPONSORS } from "../consts/sponsors";
   >
     <a
       class="transition hover:scale-110 focus:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:focus:scale-100"
-      href="https://www.infojobs.net"
-      title="Ir a la página de InfoJobs"
+      href=" https://www.instagram.com/manintienemiga/?hl=es"
+      title="Ir al Instagram de Panaderia Artesana Manin"
       target="_blank"
-      aria-label="Link con el logo de Infojobs que lleva a https://www.infojobs.net"
+      aria-label="Link con el logo de Panaderia Manin que lleva a https://www.instagram.com/manintienemiga/?hl=es"
     >
       <SponsorLogo
-        logo="infojobs"
-        width={128}
-        height={70}
+        logo="manin"
+        width={300}
+        height={250}
         class:list={[
           "inline-block select-none text-white transition hover:text-accent focus:text-accent",
         ]}

@@ -7,8 +7,8 @@ type SponsorId =
   | "refierta"
   | "cajarural"
   | "lozano"
-  | "maxibon"
-  | "infojobs";
+  | "javita"
+  | "manin";
 type SponsorName =
   | "Ayuntamiento Cangas del Narcea"
   | "Baccara"
@@ -18,8 +18,8 @@ type SponsorName =
   | "Refierta"
   | "Caja Rural"
   | "Transportes Lozano"
-  | "Maxibon"
-  | "InfoJobs";
+  | "Javita"
+  | "Manin";
 
 export interface Sponsors {
   id: SponsorId;
