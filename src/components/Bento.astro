@@ -74,19 +74,22 @@ import BentoItem from "./BentoItem.astro";
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
-    title="Patrocinadores"
-    subtitle="Gracias a ellos estamos aqui"
+    title="Deporte ASTUR"
+    subtitle="Partidos retransmitidos en directo en youtube"
   >
     <div
       slot="image"
       class="background transition-scale absolute bottom-0 left-0 top-0
-        -z-10 h-full w-full bg-blue-950
+        -z-10 h-full w-full
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/manin.jpeg');"
+      style="background-image: url('/deporteAstur.png');"
     >
     </div>
-    <div slot="content" class="max-w-xl">
-      <h2>Panaderia Manin</h2>
-    </div>
+    <p slot="content" class="max-w-xl text-blue-100">
+      <strong>
+        Promotores del deporte Asturiano, estarán con nosotros retransmitiendo
+        en directo , con entrevistas etc.</strong
+      >
+    </p>
   </BentoItem>
 </section>
