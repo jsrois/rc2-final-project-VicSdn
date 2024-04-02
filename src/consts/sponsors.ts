@@ -76,7 +76,7 @@ export const SPONSORS: Array<Sponsors> = [
   {
     id: "javita",
     name: "Javita",
-    url: "https://maxibon.es/",
+    url: "https://www.transportesjavita.com/",
     image: {
       width: 250,
       height: 150,
