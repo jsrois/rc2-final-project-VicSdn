@@ -1,0 +1,31 @@
+---
+import ResultItem from "../components/ResultItem.astro";
+import Pagination from "../components/Pagination.astro";
+
+const results = [1, 0]; 
+
+const resultsPerPage = 10;
+const totalPages = Math.ceil(results.length / resultsPerPage);
+
+let currentPage = 1;
+
+function setCurrentPage(page) {
+  currentPage = page;
+}
+
+const startIndex = (currentPage - 1) * resultsPerPage;
+const endIndex = startIndex + resultsPerPage;
+const currentResults = results.slice(startIndex, endIndex);
+---
+
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold mb-4 border border-slate-600">Resultados</h1>
+
+
+
+  <Pagination
+    totalPages={totalPages}
+    currentPage={currentPage}
+    setCurrentPage={setCurrentPage}
+  />
+</div>

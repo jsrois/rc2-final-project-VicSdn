@@ -1,0 +1,15 @@
+---
+interface Props {
+  result: {
+    id: string;
+    name: string;
+    score: number;
+  };
+}
+const { result } = Astro.props;
+---
+
+<div class="border p-4 mb-4">
+  <h2 class="font-bold text-xl">{result.name}</h2>
+  <p>Score: {result.score}</p>
+</div>
