@@ -2,7 +2,7 @@
 import ResultItem from "../components/ResultItem.astro";
 import Pagination from "../components/Pagination.astro";
 
-const results = [1, 0]; 
+const results = [1, 0];
 
 const resultsPerPage = 10;
 const totalPages = Math.ceil(results.length / resultsPerPage);
@@ -19,9 +19,12 @@ const currentResults = results.slice(startIndex, endIndex);
 ---
 
 <div class="container mx-auto">
-  <h1 class="text-3xl font-bold mb-4 border border-slate-600">Resultados</h1>
-
-
+  <h2>Partido 1 a las 18:00</h2>
+  <p>Equipo 1 - Equipo 2</p>
+  <h2>Partido 1 a las 19:00</h2>
+  <p>Equipo 3 - Equipo 4</p>
+  <h2>Partido 1 a las 20:00</h2>
+  <p>Equipo 5 - Equipo 6</p>
 
   <Pagination
     totalPages={totalPages}

@@ -55,9 +55,7 @@ const pages = [
         </>
       ))
     }
-    <a href="/" class="block lg:hidden">
-      <img src="CANGASCUPLOGO.png" alt="Logo" class="w-10" />
-    </a>
+    
 
     <HamburgerButton class:list={"block lg:hidden"} id="menuButton" />
     <div
@@ -82,9 +80,10 @@ const pages = [
           loading="lazy"
         />
         <hr
-          class="h-[2px] w-full border-t-0"
-          style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
+          class="absolute left-0 bottom-0 h-[2px] w-full border-t-0"
+          style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%); z-index: 10;"
         />
+
         {
           pages.map(({ disabled, name, href, active, soonDate }, key) => (
             <>
