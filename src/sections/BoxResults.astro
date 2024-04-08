@@ -1,6 +1,7 @@
 ---
 import ResultItem from "../components/ResultItem.astro";
 import Pagination from "../components/Pagination.astro";
+import ListTeams from "../components/ListTeams.astro";
 
 const results = [1, 0];
 
@@ -18,14 +19,21 @@ const endIndex = startIndex + resultsPerPage;
 const currentResults = results.slice(startIndex, endIndex);
 ---
 
-<div class="container mx-auto">
-  <h2>Partido 1 a las 18:00</h2>
-  <p>Equipo 1 - Equipo 2</p>
-  <h2>Partido 1 a las 19:00</h2>
-  <p>Equipo 3 - Equipo 4</p>
-  <h2>Partido 1 a las 20:00</h2>
-  <p>Equipo 5 - Equipo 6</p>
+<div
+  class="container mx-auto flex flex-col md:flex-row md:justify-center md:space-x-56 items-center my-4"
+>
+  <section class="md:w-1/3">
+    <ListTeams />
+  </section>
 
+  <section class="md:w-1/3 mt-4 md:mt-0">
+    <h2>Partido 1 a las 18:00</h2>
+    <p>Equipo 1 - Equipo 2</p>
+    <h2>Partido 1 a las 19:00</h2>
+    <p>Equipo 3 - Equipo 4</p>
+    <h2>Partido 1 a las 20:00</h2>
+    <p>Equipo 5 - Equipo 6</p>
+  </section>
   <Pagination
     totalPages={totalPages}
     currentPage={currentPage}

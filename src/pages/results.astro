@@ -8,8 +8,18 @@ import BoxResults from "../sections/BoxResults.astro";
   title="Resultados - Cangas Cup Futsal 2024"
 >
   <section class="w-auto h-auto mt-20">
+    <div class="flex justify-center">
+      <input
+        type="number"
+        min="1"
+        max="{totalPages}"
+        value="{currentPage}"
+        oninput="{(event) => setCurrentPage(parseInt(event.target.value))}"
+        class="w-2/3 md:w-68 px-4 py-2 text-2xl md:text-xl lg:text-2xl text-center border border-gray-300 rounded-md focus:outline-none focus:border-primary"
+      />
+    </div>
     <h1
-      class="text-xl font-semibold mt-5 text-amber-400 uppercase text-primary text-center tracking-wider"
+      class="text-3xl font-semibold mt-5 text-amber-400 uppercase text-primary text-center tracking-wider"
     >
       Resultados
     </h1>
