@@ -1,29 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BoxResults from "../sections/BoxResults.astro";
+
+let selectedGroup = 1; // Grupo seleccionado inicialmente
+
+function handleGroupChange(event) {
+  selectedGroup = parseInt(event.target.value);
+}
+
+const groups = Array.from({ length: 8 }, (_, i) => i + 1);
 ---
 
 <Layout
-  description="Resultados Cangas Cup 2024 "
+  description="Resultados Cangas Cup 2024"
   title="Resultados - Cangas Cup Futsal 2024"
 >
-  <section class="w-auto h-auto mt-20">
+  <section class="w-auto h-auto mt-20 m-6 p-8" >
     <div class="flex justify-center">
-      <input
-        type="number"
-        min="1"
-        max="{totalPages}"
-        value="{currentPage}"
-        oninput="{(event) => setCurrentPage(parseInt(event.target.value))}"
+      <select
+        value="{selectedGroup}"
+        onchange="{(event) => handleGroupChange(event)}"
         class="w-2/3 md:w-68 px-4 py-2 text-2xl md:text-xl lg:text-2xl text-center border border-gray-300 rounded-md focus:outline-none focus:border-primary"
-      />
+      >
+        {groups.map((group) => <option value="{group}">Gr {group}</option>)}
+      </select>
     </div>
     <h1
       class="text-3xl font-semibold mt-5 text-amber-400 uppercase text-primary text-center tracking-wider"
     >
-      Resultados
+      Resultados Gr {selectedGroup}
     </h1>
-
     <BoxResults />
   </section>
 </Layout>

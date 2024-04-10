@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+import AdminHeader from "../components/AdminHeader.astro";
+import "@fontsource-variable/onest";
+import ButtonUp from "../sections/ButtonUp.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="icon" href="/CANGASCUPLOGO.png" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <AdminHeader />
+    <slot />
+
+    <ButtonUp />
+    <style is:global>
+    
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        background: gray;
+      }
+      p {
+        color: rgb(255, 255, 255, 0.9);
+        line-height: 1.4;
+        margin-bottom: 1em;
+        font-weight: 100;
+        font-size: 0.9em;
+        letter-spacing: 0.5px;
+      }
+      p strong {
+        color: white;
+        font-weight: 700;
+      }
+    </style>
+  </body>
+</html>

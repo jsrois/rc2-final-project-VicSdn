@@ -1,15 +1,31 @@
 ---
 interface Props {
-  result: {
-    id: string;
-    name: string;
-    score: number;
-  };
+  class?: string;
+  title: string;
+  subtitle?: string;
 }
-const { result } = Astro.props;
+
+const { title, subtitle } = Astro.props;
 ---
 
-<div class="border p-4 mb-4">
-  <h2 class="font-bold text-xl">{result.name}</h2>
-  <p>Score: {result.score}</p>
-</div>
+<article
+  class={`
+  ${Astro.props.class}
+  col-span-5 bg-whit
+  relative rounded-xl
+  backdrop-blur-md
+  border border-black/10
+  shadow-inner shadow-white/10
+  overflow-hidden bg-slate-900
+  group
+`}
+>
+  <div
+    class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"
+  >
+    <h2 class="mb-4 font-semibold uppercase text-white">
+      {title}
+    </h2>
+    <slot name="content" />
+  </div>
+</article>
