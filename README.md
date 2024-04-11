@@ -26,3 +26,10 @@
 - El administrador va a tener una URL única donde podra iniciar sesión y gestionar la app.
 - Actualiza los resultados de los partidos y gestiona los equipos.
 
+
+## Cómo lanzar el proyecto
+
+```
+npm install 
+npm run dev
+```
